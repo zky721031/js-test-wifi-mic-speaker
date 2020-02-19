@@ -1,0 +1,88 @@
+body {
+    background-color: rgba(110, 208, 197, 1);
+}
+
+.wrap {
+    width: 1200px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.my-card {
+    height: 400px;
+    box-shadow: 0 0 30px rgba(35, 24, 21, 0.1);
+    transition: all 0.3s;
+}
+
+.my-card:hover {
+    box-shadow: 0 0 30px rgba(35, 24, 21, 0.4);
+}
+
+#progress {
+    color: rgba(110, 208, 197, 1);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(110, 208, 197, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(35, 24, 21, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.icon {
+    color: rgba(110, 208, 197, 1);
+    font-size: 2rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-s {
+    color: rgba(110, 208, 197, 1);
+    font-size: 0.9rem;
+}
+
+.btn-bottom {
+    position: absolute;
+    bottom: 30px;
+}
+
+a.recorder {
+    width: 50px;
+    height: 50px;
+    color: rgba(110, 208, 197, 1);
+    border: 1px solid rgba(96, 156, 245, 1);
+    border-radius: 50%;
+}
+
+a.btn-bottom {
+    text-decoration: none;
+    color: rgba(110, 208, 197, 1);
+    background-color: #fff;
+    border: 2px solid rgba(110, 208, 197, 1);
+    padding: 5px 30px;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    transition: all 0.5s;
+    position: absolute;
+    bottom: 30px;
+}
+
+a.btn-bottom:hover {
+    background-color: rgba(110, 208, 197, 1);
+    color: #fff;
+}
+
+.bb {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}

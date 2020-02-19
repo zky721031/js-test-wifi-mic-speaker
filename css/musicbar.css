@@ -1,0 +1,7 @@
+.music-bar {
+    margin-top: 50px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
