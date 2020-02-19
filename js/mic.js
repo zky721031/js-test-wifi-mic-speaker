@@ -72,14 +72,14 @@ $$('#stop').addEventListener('click', () => {
     stop();
 })
 
-/*function setup() {
+function setup() {
     // init
     mic = new p5.AudioIn()
     recorder = new p5.SoundRecorder()
     soundFile = new p5.SoundFile()
     //setup
     recorder.setInput(mic);
-}*/
+}
 
 function record() {
     mic.start()
