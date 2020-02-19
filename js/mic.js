@@ -39,7 +39,7 @@ function handleError(error) {
     console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
 }
 
-function start() {
+function goStart() {
     if (window.stream) {
         window.stream.getTracks().forEach(track => {
             track.stop();
@@ -56,6 +56,42 @@ function start() {
     navigator.mediaDevices.getUserMedia(constraints).then(gotStream).then(gotDevices).catch(handleError);
 }
 
-audioInputSelect.onchange = start;
+audioInputSelect.onchange = goStart;
 
-start();
+
+// P5js
+const $$ = s => document.querySelector(s)
+let mic, recorder, soundFile
+
+$$('#record').addEventListener('click', () => {
+    record();
+    goStart();
+})
+
+$$('#stop').addEventListener('click', () => {
+    stop();
+})
+
+function setup() {
+    // init
+    mic = new p5.AudioIn()
+    recorder = new p5.SoundRecorder()
+    soundFile = new p5.SoundFile()
+    //setup
+    recorder.setInput(mic);
+}
+
+function record() {
+    mic.start()
+    recorder.record(soundFile)
+    $$('#stop').classList.remove('d-none')
+    $$('#record').classList.add('d-none')
+}
+
+function stop() {
+    mic.stop()
+    recorder.stop()
+    soundFile.play()
+    $$('#stop').classList.add('d-none')
+    $$('#record').classList.remove('d-none')
+}
